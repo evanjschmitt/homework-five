@@ -94,9 +94,7 @@ p {
 }
 
 .siteWrapper {
-  max-width: 1280px;
   min-height: 500px;
-  background-color: #faebd7;
   margin: 0 auto;
 }
 
@@ -104,7 +102,7 @@ a {
   text-decoration: none;
 }
 
-.navHolder {
+.home-nav-holder {
   position: absolute;
   top: 0;
   left: 10%;
@@ -112,7 +110,7 @@ a {
   border-bottom-color: white;
   border-bottom-style: solid;
 }
-.navHolder .links {
+.home-nav-holder .links {
   width: 50%;
   display: flex;
   align-items: center;
@@ -120,11 +118,11 @@ a {
   width: 50%;
   margin-right: -2%;
 }
-.navHolder .links p {
+.home-nav-holder .links p {
   color: #79addc;
   margin-top: 10px;
 }
-.navHolder nav {
+.home-nav-holder nav {
   width: 980px;
   height: 90px;
   margin: 0 auto;
@@ -132,33 +130,68 @@ a {
   align-items: center;
   justify-content: space-between;
 }
-.navHolder nav h1 {
+.home-nav-holder nav h1 {
   margin-right: 250px;
   margin-left: -100px;
   color: white;
 }
-.navHolder nav a {
+.home-nav-holder nav a {
   text-decoration: none;
   color: white;
   font-family: gsLight;
 }
 
+.nav-holder {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 24%;
+  border-bottom-width: 2px;
+  border-bottom-color: black;
+  border-bottom-style: solid;
+  display: flex;
+}
+.nav-holder .links {
+  width: 450px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.nav-holder .links p {
+  color: black;
+  margin-top: 10px;
+}
+.nav-holder nav {
+  width: 980px;
+  height: 90px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-holder nav a {
+  text-decoration: none;
+  color: black;
+  font-family: gsLight;
+  margin-top: 10px;
+  margin: 10px 5px;
+}
+
 @media (max-width: 1120px) {
-  .navHolder {
+  .home-nav-holder {
     width: 80%;
   }
-  .navHolder .links {
+  .home-nav-holder .links {
     padding-left: -100px;
     max-width: 100%;
     margin-right: 55%;
     padding-left: 10%;
   }
-  .navHolder .links a {
+  .home-nav-holder .links a {
     padding: 5%;
   }
 }
 @media (max-width: 700px) {
-  .navHolder {
+  .home-nav-holder {
     width: 88%;
     margin-left: -5%;
   }
@@ -168,29 +201,33 @@ a {
   .links {
     margin-left: -10%;
     padding: -5%;
+    display: flex;
+    align-items: right;
+    justify-content: space-evenly;
   }
-  .navHolder {
+  .home-nav-holder {
     width: 85%;
   }
-  .navHolder .logo {
+  .home-nav-holder .logo {
     width: 50px;
   }
-  .navHolder .links {
+  .home-nav-holder .links {
     width: 60%;
     font-size: 12px;
   }
 }
-@media (max-width: 550px) {
-  .navHolder {
-    width: 88%;
-    margin-left: -5%;
+@media (max-width: 1130px) {
+  .nav-holder {
+    width: 55%;
   }
   .logo {
     display: none;
   }
   .links {
-    margin-left: -10%;
-    padding: -5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
   }
 }
 .home .hero {
@@ -449,11 +486,83 @@ footer .footerIcons a {
     width: 40%;
   }
 }
-.AboutTitle {
-  width: 1280px;
+.aboutWrapper {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.aboutWrapper .AboutTitle {
+  max-width: 100%;
+  margin: 0 auto;
   position: relative;
+  margin-top: 15%;
+  margin-bottom: 10%;
+}
+.aboutWrapper .AboutTitle h2 {
+  font-size: 60px;
+  font-family: NovaCondensed;
+  text-decoration: underline;
+  margin-bottom: 3%;
+  font-weight: 3;
+}
+.aboutWrapper .AboutTitle p {
+  font-family: gsLight;
+  font-size: 16px;
+}
+.aboutWrapper .quotes {
+  margin-bottom: 150px;
+}
+.aboutWrapper .quotes .quote {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+  max-width: 65%;
+}
+.aboutWrapper .quotes .quote img {
+  max-width: 260px;
+  max-height: 150px;
+  margin-right: 5%;
+}
+.aboutWrapper .quotes .quote span {
+  color: #79addc;
+  font-family: NovaCondensed;
+  font-size: 20px;
+  margin-left: 70%;
+}
+.aboutWrapper .quotes .quote p {
+  font-size: 16px;
+  font-family: gsLight;
+  padding-bottom: 10%;
+}
+.aboutWrapper .quotes h3 {
+  font-family: NovaCondensed;
+  text-decoration: underline;
+  font-size: 40px;
+  font-weight: 2;
 }
 
+@media (max-width: 1000px) {
+  .AboutTitle {
+    width: 40%;
+  }
+  .AboutTitle p {
+    width: 124%;
+  }
+  .quotes {
+    max-width: 150%;
+    margin-left: 24%;
+  }
+  .quotes h3 {
+    margin-right: 15%;
+  }
+  .quotes .quote {
+    flex-direction: column;
+  }
+  .quotes .quote p {
+    margin-left: 10%;
+    margin-top: 5%;
+  }
+}
 @font-face {
   font-family: gsLight;
   src: url(../css/fonts/Gill\ Sans\ Light.otf);
