@@ -71,19 +71,33 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin-bottom: 16px;
+}
+
+.homeWrapper {
+  max-width: 1280px;
+  min-height: 500px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .siteWrapper {
   max-width: 1280px;
   min-height: 500px;
+  background-color: #faebd7;
   margin: 0 auto;
-  position: relative;
 }
 
 a {
@@ -435,6 +449,11 @@ footer .footerIcons a {
     width: 40%;
   }
 }
+.AboutTitle {
+  width: 1280px;
+  position: relative;
+}
+
 @font-face {
   font-family: gsLight;
   src: url(../css/fonts/Gill\ Sans\ Light.otf);
